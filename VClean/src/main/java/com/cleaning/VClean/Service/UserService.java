@@ -1,21 +1,26 @@
 package com.cleaning.VClean.Service;
 
 import com.cleaning.VClean.Entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import com.cleaning.VClean.Repository.UserRepository;
 
-@Service
-public class UserService {
+import java.util.List;
+import java.util.Optional;
 
-    @Autowired
-    private UserRepository userRepository;
+public interface UserService {
 
-    public User saveUser(User user) {
-        return userRepository.save(user);
-    }
+// This method gets all users from the database
+List<User> getAllUsers();
 
-    public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
-    }
+// This method gets a user by their ID from the database
+Optional<User> getUserById(Long id);
+
+// This method creates a new user and saves
+// them to the database
+User createUser(User user);
+
+// This method updates a user's information in the database
+User updateUser(Long id, User userDetails);
+
+// This method deletes a user by their ID
+void deleteUser(Long id);
+
 }

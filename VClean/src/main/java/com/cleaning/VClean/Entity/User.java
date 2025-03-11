@@ -1,28 +1,31 @@
 package com.cleaning.VClean.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-
+import jakarta.persistence.*;
+// The @Entity annotation tells Java this is an entity
+// class that will be stored in the database
 @Entity
-@Table(name = "users")
 public class User {
-
+    // @Id marks this variable as the primary
+    // key for the User entity
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userID;
+    // These are regular variables to hold the user's info
     private String username;
-    private String password;
+    private String email;
+    private String firstname;
+    private String lastname;
+    private String passwordhash;
+    private String salt;
 
-    // Getters and setters
-    public Long getId() {
-        return id;
+    // Getters and Setters below are used to access
+    // or modify the values of the variables
+    public Long getUserID() {
+        return userID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserID(Long userID) {
+        this.userID = userID;
     }
 
     public String getUsername() {
@@ -33,11 +36,43 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getPasswordhash() {
+        return passwordhash;
+    }
+
+    public void setPasswordhash(String passwordhash) {
+        this.passwordhash = passwordhash;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }
