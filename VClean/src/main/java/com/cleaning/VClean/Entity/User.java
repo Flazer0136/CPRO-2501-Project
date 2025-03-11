@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 // The @Entity annotation tells Java this is an entity
 // class that will be stored in the database
 @Entity
+@Table(name = "users")
 public class User {
     // @Id marks this variable as the primary
     // key for the User entity
