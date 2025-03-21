@@ -1,0 +1,110 @@
+/* Overall container */
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Left: Login Form */
+.login-form-container {
+    flex: 1;
+    max-width: 450px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.login-form-container h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.login-form-container p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+/* Form Fields */
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-container form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.login-form-container form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Remember Me & Forgot Password */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me label {
+    margin-left: 0.25rem;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+}
+
+/* Login Button */
+.login-button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Sign Up Link */
+.signup-link {
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Right: Image Section */
+.login-image-container {
+    flex: 1;
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cleaning-img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.cleaning-text {
+    font-size: 1.5rem;
+    color: #333;
+}
