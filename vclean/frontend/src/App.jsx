@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import LoginPage from './Components/LoginPage'; // Existing component file
-import RegisterPage from './Components/RegisterPage'; // Registration component in its own file
+import LoginPage from './components/LoginPage'; // Existing component file
+import RegisterPage from './components/RegisterPage'; // Registration component in its own file
 import './App.css';
 
 function Home() {
