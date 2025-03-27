@@ -1,17 +1,26 @@
-/* RegisterPage.css */
-
 /* Main container */
 .register-page {
-    display: flex;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Left Section: Registration Form */
+/* Card layout */
+.register-card {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Left: Registration Form */
 .register-form-container {
     flex: 1;
-    padding: 2rem;
-    background-color: #f7f7f7;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +28,7 @@
 
 .register-form-container h2 {
     margin-bottom: 0.5rem;
+    font-size: 2rem;
     color: #333;
 }
 
@@ -27,23 +37,35 @@
     color: #666;
 }
 
-/* Form styles */
-.register-form-container form {
+/* Form styling */
+form {
     display: flex;
     flex-direction: column;
 }
 
-.register-form-container label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+form label {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
     color: #444;
 }
 
-.register-form-container input {
+form input {
     padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #007bff;
+}
+
+/* Error message */
+form p[style] {
+    color: red;
+    margin-bottom: 1rem;
 }
 
 /* Register button */
@@ -51,18 +73,20 @@
     padding: 0.75rem;
     background-color: #007bff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #fff;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .register-button:hover {
     background-color: #0056b3;
 }
 
-/* Login link styling */
+/* Login link */
 .login-link {
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -72,42 +96,44 @@
 .login-link a {
     color: #007bff;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .login-link a:hover {
     text-decoration: underline;
 }
 
-/* Right Section: Image & Label */
+/* Right: Image Side */
 .register-image-container {
     flex: 1;
-    background: #fff;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem;
 }
 
-.register-image-container .cleaning-img {
-    max-width: 100%;
+.cleaning-img {
+    max-width: 80%;
     height: auto;
     margin-bottom: 1rem;
 }
 
-.register-image-container .cleaning-text {
+.cleaning-text {
     font-size: 1.5rem;
+    font-weight: 600;
     color: #333;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive layout */
 @media (max-width: 768px) {
-    .register-page {
+    .register-card {
         flex-direction: column;
     }
 
+    .register-form-container,
     .register-image-container {
-        order: -1;
-        margin-bottom: 2rem;
+        padding: 2rem;
     }
 }

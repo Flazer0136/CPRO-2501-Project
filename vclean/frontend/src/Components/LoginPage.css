@@ -1,21 +1,34 @@
-/* Overall container */
+/* Container setup */
 .login-page {
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.login-card {
     display: flex;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 960px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
 /* Left: Login Form */
 .login-form-container {
     flex: 1;
-    max-width: 450px;
-    margin: auto;
-    padding: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login-form-container h2 {
-    margin-bottom: 0.5rem;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .login-form-container p {
@@ -23,88 +36,116 @@
     color: #666;
 }
 
-/* Form Fields */
-.login-form-container form {
+/* Form */
+form {
     display: flex;
     flex-direction: column;
 }
 
-.login-form-container form label {
-    margin-bottom: 0.5rem;
+form label {
+    margin-bottom: 0.3rem;
     font-weight: 600;
 }
 
-.login-form-container form input {
+form input {
     padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
     outline: none;
+    transition: border-color 0.3s;
 }
 
-/* Remember Me & Forgot Password */
+form input:focus {
+    border-color: #007bff;
+}
+
+/* Extra options */
 .extra-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
-}
-
-.remember-me {
-    display: flex;
-    align-items: center;
-}
-
-.remember-me label {
-    margin-left: 0.25rem;
+    font-size: 0.9rem;
 }
 
 .forgot-password {
-    text-decoration: none;
     color: #007bff;
-    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 /* Login Button */
 .login-button {
     padding: 0.75rem;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Sign Up Link */
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sign Up */
 .signup-link {
     text-align: center;
+    margin-top: 1rem;
 }
 
 .signup-link a {
-    text-decoration: none;
     color: #007bff;
+    text-decoration: none;
     font-weight: 600;
 }
 
-/* Right: Image Section */
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Right: Image Side */
 .login-image-container {
     flex: 1;
-    background: #f8f8f8;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 3rem;
 }
 
 .cleaning-img {
-    max-width: 70%;
+    max-width: 80%;
     height: auto;
     margin-bottom: 1rem;
 }
 
 .cleaning-text {
     font-size: 1.5rem;
+    font-weight: 600;
     color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .login-image-container {
+        padding: 2rem;
+    }
+
+    .login-form-container {
+        padding: 2rem;
+    }
 }
