@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import LoginPage from './components/LoginPage'; // Existing component file
-import RegisterPage from './components/RegisterPage'; // Registration component in its own file
+import LoginPage from './Components/LoginPage';
+import RegisterPage from './Components/RegisterPage';
+import SearchFilterPage from './Components/SearchFilterPage';
+import BookingPage from './Components/BookingPage';
 import './App.css';
 
 function Home() {
@@ -24,6 +26,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />
+                    <Route path="/search" element={<SearchFilterPage />} />
+                    <Route path="/booking" element={<BookingPage />} />
                 </Routes>
             </div>
         </Router>

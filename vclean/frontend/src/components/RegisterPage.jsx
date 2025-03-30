@@ -15,98 +15,94 @@ function RegisterPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Basic validation: Check if passwords match
+        // Basic validation
         if (password !== confirmPassword) {
             setError('Passwords do not match.');
             return;
         }
 
-        // Simulate registration process (here you'd normally call an API)
+        // Simulate registration
         console.log('Registration data:', { username, email, password });
 
-        // Reset form and error
+        // Clear form
         setUsername('');
         setEmail('');
         setPassword('');
         setConfirmPassword('');
         setError('');
 
-        // Redirect to login page after successful registration
+        // Navigate to login page
         navigate('/login');
     };
 
     return (
         <div className="register-page">
-            {/* Left Section: Registration Form */}
-            <div className="register-form-container">
-                <h2>Create an Account</h2>
-                <p>Fill in your details to create your account</p>
+            <div className="register-card">
+                {/* Left: Form Section */}
+                <div className="register-form-container">
+                    <h2>Create an Account</h2>
+                    <p>Fill in your details to create your account</p>
 
-                <form onSubmit={handleSubmit}>
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    <form onSubmit={handleSubmit}>
+                        {error && <p style={{ color: 'red' }}>{error}</p>}
 
-                    {/* Username Field */}
-                    <label htmlFor="username">Username</label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
+                        <label htmlFor="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
 
-                    {/* Email Address Field */}
-                    <label htmlFor="email">Email address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Email address"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+                        <label htmlFor="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
 
-                    {/* Password Field */}
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
 
-                    {/* Confirm Password Field */}
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        placeholder="Confirm Password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        required
-                    />
+                        <label htmlFor="confirmPassword">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm Password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
+                        />
 
-                    {/* Register Button */}
-                    <button type="submit" className="register-button">Register</button>
+                        <button type="submit" className="register-button">Register</button>
 
-                    {/* Login Link */}
-                    <p className="login-link">
-                        Already have an account? <Link to="/login">Login</Link>
-                    </p>
-                </form>
-            </div>
+                        <p className="login-link">
+                            Already have an account? <Link to="/login">Login</Link>
+                        </p>
+                    </form>
+                </div>
 
-            {/* Right Section: Image & Label */}
-            <div className="register-image-container">
-                <img src={cleaningImage} alt="Cleaning Service" className="cleaning-img" />
-                <h3 className="cleaning-text">Cleaning Service</h3>
+                {/* Right: Image Section */}
+                <div className="register-image-container">
+                    <img src={cleaningImage} alt="Cleaning Service" className="cleaning-img" />
+                    <h3 className="cleaning-text">Cleaning Service</h3>
+                </div>
             </div>
         </div>
     );

@@ -58,7 +58,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.VCleanApplication.executor": "Run",
-    "Application.VcleanApplication.executor": "Run",
     "Node.js.App.js.executor": "Run",
     "Node.js.login.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -77,6 +76,7 @@
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
+}]]></component>
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

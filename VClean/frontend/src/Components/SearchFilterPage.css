@@ -1,0 +1,73 @@
+/* Full page layout */
+.search-filter-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f4f6f8; /* Subtle gray background */
+    padding: 2rem;
+}
+
+/* Centered card */
+.search-filter-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-filter-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.search-filter-card p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Form styling */
+.search-filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left; /* Labels align left, or keep center if you prefer */
+}
+
+.search-filter-form label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.3rem;
+}
+
+.search-filter-form input,
+.search-filter-form select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Search button */
+.search-button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
