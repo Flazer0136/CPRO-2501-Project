@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="296e5e6c-fa4b-4697-b8ae-8b60ddad2c37" name="Changes" comment="" />
+    <list default="true" id="296e5e6c-fa4b-4697-b8ae-8b60ddad2c37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cleaning/vclean/VcleanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cleaning/vclean/VcleanApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +76,7 @@
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
+}]]></component>
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

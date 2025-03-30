@@ -1,13 +1,13 @@
-/* Main container */
-.register-page {
+/* Container setup */
+.login-page {
     justify-content: center;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Card layout */
-.register-card {
+/* Card styling */
+.login-card {
     display: flex;
     width: 100%;
     max-width: 960px;
@@ -17,8 +17,8 @@
     overflow: hidden;
 }
 
-/* Left: Registration Form */
-.register-form-container {
+/* Left: Login Form */
+.login-form-container {
     flex: 1;
     padding: 3rem;
     display: flex;
@@ -26,18 +26,17 @@
     justify-content: center;
 }
 
-.register-form-container h2 {
-    margin-bottom: 0.5rem;
+.login-form-container h2 {
     font-size: 2rem;
-    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-.register-form-container p {
+.login-form-container p {
     margin-bottom: 1.5rem;
     color: #666;
 }
 
-/* Form styling */
+/* Form */
 form {
     display: flex;
     flex-direction: column;
@@ -46,7 +45,6 @@ form {
 form label {
     margin-bottom: 0.3rem;
     font-weight: 600;
-    color: #444;
 }
 
 form input {
@@ -56,61 +54,72 @@ form input {
     border-radius: 6px;
     font-size: 1rem;
     outline: none;
+    transition: border-color 0.3s;
 }
 
 form input:focus {
     border-color: #007bff;
 }
 
-/* Error message */
-form p[style] {
-    color: red;
-    margin-bottom: 1rem;
+/* Extra options */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
 }
 
-/* Register button */
-.register-button {
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-button {
     padding: 0.75rem;
     background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 6px;
-    color: #fff;
-    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 0.5rem;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
-.register-button:hover {
+.login-button:hover {
     background-color: #0056b3;
 }
 
-/* Login link */
-.login-link {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+/* Sign Up */
+.signup-link {
     text-align: center;
+    margin-top: 1rem;
 }
 
-.login-link a {
+.signup-link a {
     color: #007bff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.login-link a:hover {
+.signup-link a:hover {
     text-decoration: underline;
 }
 
 /* Right: Image Side */
-.register-image-container {
+.login-image-container {
     flex: 1;
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 3rem;
 }
 
@@ -124,16 +133,23 @@ form p[style] {
     font-size: 1.5rem;
     font-weight: 600;
     color: #333;
+<<<<<<< HEAD:vclean/frontend/src/Components/LoginPage.css
 }
 
-/* Responsive layout */
+/* Responsive */
 @media (max-width: 768px) {
-    .register-card {
+    .login-card {
         flex-direction: column;
     }
 
-    .register-form-container,
-    .register-image-container {
+    .login-image-container {
+        padding: 2rem;
+    }
+
+    .login-form-container {
         padding: 2rem;
     }
 }
+=======
+}
+>>>>>>> main:vclean/frontend/src/components/LoginPage.css
