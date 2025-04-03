@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../App'; // Adjust path as needed
 import './RegisterPage.css';
 import cleaningImage from '../assets/cleaningImage.png';
 
@@ -9,30 +10,59 @@ function RegisterPage() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-
+    const authContext = useContext(AuthContext);
     const navigate = useNavigate();
+
+    // Safety check if context is missing
+    if (!authContext) {
+        console.error("AuthContext is not available");
+        return <div>Loading...</div>;
+    }
+
+    const { setIsAuthenticated, setUser } = authContext;
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Basic validation
+        // Validation
         if (password !== confirmPassword) {
-            setError('Passwords do not match.');
+            setError('Passwords do not match');
+            return;
+        }
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters');
+            return;
+        }
+        if (!email.includes('@')) {
+            setError('Please enter a valid email');
             return;
         }
 
         // Simulate registration
-        console.log('Registration data:', { username, email, password });
+        try {
+            // In a real app, you would call your backend API here
+            console.log('Registration data:', { username, email, password });
 
-        // Clear form
-        setUsername('');
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-        setError('');
+            // Simulate successful registration
+            setIsAuthenticated(true);
+            setUser({
+                username,
+                email,
+                name: username // Using username as display name
+            });
 
-        // Navigate to login page
-        navigate('/login');
+            // Clear form
+            setUsername('');
+            setEmail('');
+            setPassword('');
+            setConfirmPassword('');
+            setError('');
+
+            // Redirect to home page
+            navigate('/');
+        } catch (err) {
+            setError('Registration failed. Please try again.');
+        }
     };
 
     return (
@@ -44,7 +74,7 @@ function RegisterPage() {
                     <p>Fill in your details to create your account</p>
 
                     <form onSubmit={handleSubmit}>
-                        {error && <p style={{ color: 'red' }}>{error}</p>}
+                        {error && <p className="error-message">{error}</p>}
 
                         <label htmlFor="username">Username</label>
                         <input
@@ -73,10 +103,11 @@ function RegisterPage() {
                             type="password"
                             id="password"
                             name="password"
-                            placeholder="Password"
+                            placeholder="Password (min 6 characters)"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
+                            minLength={6}
                         />
 
                         <label htmlFor="confirmPassword">Confirm Password</label>
